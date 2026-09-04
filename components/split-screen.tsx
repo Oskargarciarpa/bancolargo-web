@@ -124,7 +124,7 @@ function Panel({
       />
 
       <div className="relative z-10 w-full p-8 sm:p-12 lg:p-16">
-        <div className="max-w-md">
+        <div className="max-w-xl">
           <img
             src={logo || '/placeholder.svg'}
             alt={logoAlt}
