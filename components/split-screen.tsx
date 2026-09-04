@@ -123,8 +123,8 @@ function Panel({
         aria-hidden="true"
       />
 
-      <div className="relative z-10 w-full p-8 sm:p-12 lg:p-16">
-        <div className="max-w-xl">
+      <div className="relative z-10 w-full p-6 sm:p-10 lg:p-12">
+        <div className="max-w-md md:max-w-none">
           <img
             src={logo || '/placeholder.svg'}
             alt={logoAlt}
