@@ -128,7 +128,7 @@ function Panel({
           <img
             src={logo || '/placeholder.svg'}
             alt={logoAlt}
-            className="mb-6 h-28 w-auto object-contain drop-shadow-[0_2px_12px_oklch(0.82_0.13_82_/_0.35)] transition-transform duration-500 group-hover:scale-105 sm:h-20 sm:w-20"
+            className="mb-6 h-24 md:h-48 w-auto object-contain drop-shadow-[0_2px_12px_oklch(0.82_0.13_82_/_0.35)] transition-transform duration-500 group-hover:scale-105 sm:h-20 sm:w-20"
           />
           <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-gold">
             {eyebrow}
