@@ -29,7 +29,7 @@ export function SplitScreen() {
 
       <div
         aria-hidden="true"
-        className="hidden md:block absolute left-1/2 top-0 z-20 h-full w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-gold/40 to-transparent"
+        className="hidden md:block absolute left-1/2 top-0 z-20 h-full w-[2px] -translate-x-1/2 bg-gradient-to-b from-transparent via-gold to-transparent shadow-[0_0_12px_rgba(212,175,55,0.8)]"
       />
 
       <Panel
