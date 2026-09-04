@@ -90,6 +90,7 @@ function Panel({
       onMouseLeave={() => onActivate(null)}
       onFocus={() => onActivate(side)}
       onBlur={() => onActivate(null)}
+      onTouchStart={() => onActivate(side)}
       className="group relative flex flex-1 items-end overflow-hidden outline-none transition-[flex-grow] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] focus-visible:z-30 data-[active=true]:md:grow-[1.22] data-[dimmed=true]:md:grow-[0.78]"
       data-active={isActive}
       data-dimmed={isDimmed}
@@ -97,7 +98,7 @@ function Panel({
       <img
         src={image || '/placeholder.svg'}
         alt={imageAlt}
-        className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+        className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105 group-data-[active=true]:scale-105"
       />
 
       {/* base darkening */}
@@ -128,7 +129,7 @@ function Panel({
           <img
             src={logo || '/placeholder.svg'}
             alt={logoAlt}
-            className="mb-6 h-24 md:h-32 w-auto object-contain drop-shadow-[0_2px_12px_oklch(0.82_0.13_82_/_0.35)] transition-transform duration-500 group-hover:scale-105"
+            className="mb-6 h-24 md:h-32 w-auto object-contain drop-shadow-[0_2px_12px_oklch(0.82_0.13_82_/_0.35)] transition-transform duration-500 group-hover:scale-105 group-data-[active=true]:scale-105"
           />
           <p className="mb-4 hidden md:inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-gold">
             {eyebrow}
