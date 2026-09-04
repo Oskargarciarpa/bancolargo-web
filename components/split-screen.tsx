@@ -30,7 +30,7 @@ export function SplitScreen() {
       <div
   aria-hidden="true"
   className={`pointer-events-none absolute left-1/2 top-1/2 md:top-0 z-20 -translate-x-1/2 -translate-y-1/2 md:translate-y-0 w-11/12 md:w-[2px] h-[2px] md:h-full bg-gradient-to-r md:bg-gradient-to-b from-transparent via-gold to-transparent shadow-[0_0_12px_rgba(212,175,55,0.8)] transition-opacity duration-500 ${
-    active ? 'opacity-0' : 'opacity-100'
+    active !== null ? 'opacity-0' : 'opacity-100'
   }`}
 />
 
@@ -93,6 +93,7 @@ function Panel({
       onFocus={() => onActivate(side)}
       onBlur={() => onActivate(null)}
       onTouchStart={() => onActivate(side)}
+      onTouchEnd={() => onActivate(null)}
       className="group relative flex flex-1 items-end overflow-hidden outline-none transition-[flex-grow] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] focus-visible:z-30 data-[active=true]:md:grow-[1.22] data-[dimmed=true]:md:grow-[0.78]"
       data-active={isActive}
       data-dimmed={isDimmed}
