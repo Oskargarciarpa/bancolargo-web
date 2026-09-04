@@ -28,9 +28,11 @@ export function SplitScreen() {
       />
 
       <div
-        aria-hidden="true"
-        className={absolute left-1/2 top-1/2 md:top-0 z-20 -translate-x-1/2 -translate-y-1/2 md:translate-y-0 w-11/12 md:w-[2px] h-[2px] md:h-full bg-gradient-to-r md:bg-gradient-to-b from-transparent via-gold to-transparent shadow-[0_0_12px_rgba(212,175,55,0.8)] transition-opacity duration-500 ${active ? 'opacity-0' : 'opacity-100'}}
-      />
+  aria-hidden="true"
+  className={`pointer-events-none absolute left-1/2 top-1/2 md:top-0 z-20 -translate-x-1/2 -translate-y-1/2 md:translate-y-0 w-11/12 md:w-[2px] h-[2px] md:h-full bg-gradient-to-r md:bg-gradient-to-b from-transparent via-gold to-transparent shadow-[0_0_12px_rgba(212,175,55,0.8)] transition-opacity duration-500 ${
+    active ? 'opacity-0' : 'opacity-100'
+  }`}
+/>
 
       <Panel
         href="/estudio"
