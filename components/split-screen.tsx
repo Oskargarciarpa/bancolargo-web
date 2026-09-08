@@ -106,7 +106,7 @@ function Panel({
 
       {/* base darkening */}
       <div
-        className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/50 transition-opacity duration-700 group-hover:opacity-60"
+        className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/50 transition-opacity duration-700 group-hover:opacity-60"
         aria-hidden="true"
       />
       {/* dim overlay when the other side is hovered */}
