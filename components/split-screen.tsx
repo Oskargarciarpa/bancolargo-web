@@ -12,12 +12,6 @@ export function SplitScreen() {
   return (
     <div className="relative flex h-[100dvh] w-full flex-col overflow-hidden md:flex-row">
       <div className="absolute top-6 left-1/2 -translate-x-1/2 z-30 pointer-events-none">
-  <img
-    src="/images/banco-largo-titulo.png"
-    alt="Banco Largo Music"
-    className="h-7 md:h-9 w-auto object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
-  />
-</div>
       <Panel
         href="/grupo"
         image="/images/live-stage.png"
