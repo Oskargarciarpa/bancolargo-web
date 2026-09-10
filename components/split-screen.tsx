@@ -12,12 +12,13 @@ export function SplitScreen() {
   return (
     <div className="relative flex h-[100dvh] w-full flex-col overflow-hidden md:flex-row">
       <div className="absolute top-6 left-1/2 -translate-x-1/2 z-30 pointer-events-none">
-  <img
-    src="/images/banco-largo-titulo.png"
-    alt="Banco Largo Music"
-    className="h-9 md:h-18 w-auto object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
-  />
-</div>
+        <img
+          src="/images/banco-largo-titulo.png"
+          alt="Banco Largo Music"
+          className="h-9 md:h-18 w-auto object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
+        />
+      </div>
+
       <Panel
         href="/grupo"
         image="/images/live-stage.png"
@@ -35,11 +36,11 @@ export function SplitScreen() {
       />
 
       <div
-  aria-hidden="true"
-  className={`pointer-events-none absolute left-1/2 top-1/2 md:top-0 z-20 -translate-x-1/2 -translate-y-1/2 md:translate-y-0 w-11/12 md:w-[2px] h-[2px] md:h-full bg-gradient-to-r md:bg-gradient-to-b from-transparent via-gold to-transparent shadow-[0_0_12px_rgba(212,175,55,0.8)] transition-opacity duration-500 ${
-    active !== null ? 'opacity-0' : 'opacity-100'
-  }`}
-/>
+        aria-hidden="true"
+        className={`pointer-events-none absolute left-1/2 top-1/2 md:top-0 z-20 -translate-x-1/2 -translate-y-1/2 md:translate-y-0 w-11/12 md:w-[2px] h-[2px] md:h-full bg-gradient-to-r md:bg-gradient-to-b from-transparent via-[#d4af37] to-transparent shadow-[0_0_12px_rgba(212,175,55,0.8)] transition-opacity duration-500 ${
+          active !== null ? 'opacity-0' : 'opacity-100'
+        }`}
+      />
 
       <Panel
         href="/estudio"
@@ -111,18 +112,17 @@ function Panel({
         className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105 group-data-[active=true]:scale-105"
       />
 
-      {/* base darkening */}
       <div
         className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/50 transition-opacity duration-700 group-hover:opacity-60"
         aria-hidden="true"
       />
-      {/* dim overlay when the other side is hovered */}
+      
       <div
         className="absolute inset-0 bg-background/70 opacity-0 transition-opacity duration-700 data-[dimmed=true]:opacity-100"
         data-dimmed={isDimmed}
         aria-hidden="true"
       />
-      {/* warm hover glow */}
+
       <div
         className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
         style={{
@@ -134,38 +134,34 @@ function Panel({
         aria-hidden="true"
       />
 
-<div className="relative z-10 flex flex-col items-center justify-center text-center w-full max-w-xl p-6 sm:p-10 lg:p-12">
+      {/* Estructura vertical limpia */}
+      <div className="relative z-10 flex flex-col items-center justify-center text-center w-full max-w-xl p-6 sm:p-10 lg:p-12">
         
         {/* 1. TÍTULO */}
         <h2 className="font-display text-3xl font-extrabold uppercase leading-[0.95] tracking-tight text-balance text-foreground sm:text-4xl lg:text-5xl">
           {title}
         </h2>
 
-        {/* 2. DESCRIPCIÓN (Espacio mt-6 para separarlo del título) */}
+        {/* 2. DESCRIPCIÓN CON ESPACIO */}
         <p className="mt-6 max-w-sm text-pretty leading-relaxed text-foreground/80 text-sm md:text-base">
           {subtitle}
         </p>
 
-        {/* 3. LOGO (Tamaño h-14/h-20 con margen vertical dedicado) */}
+        {/* 3. LOGO MÁS GRANDE */}
         {logo && (
           <div className="my-6">
             <img
               src={logo || '/placeholder.svg'}
               alt={logoAlt}
-              className="h-14 md:h-20 w-auto object-contain mx-auto drop-shadow-[0_2px_12px_oklch(0.82_0.13_82_/_0.35)] transition-transform duration-500 group-hover:scale-105 group-data-[active=true]:scale-105"
+              className="h-16 md:h-24 w-auto object-contain mx-auto drop-shadow-[0_2px_12px_oklch(0.82_0.13_82_/_0.35)] transition-transform duration-500 group-hover:scale-105 group-data-[active=true]:scale-105"
             />
           </div>
         )}
 
         {/* 4. BOTÓN CTA */}
         <div className="flex justify-center w-full">
-          <span className="inline-flex items-center gap-2 border-b border-gold/40 pb-1 text-sm font-semibold uppercase tracking-wider text-gold transition-all duration-300 group-hover:gap-3">
+          <span className="inline-flex items-center gap-2 border-b border-[#d4af37]/40 pb-1 text-sm font-semibold uppercase tracking-wider text-[#d4af37] transition-all duration-300 group-hover:gap-3">
             {cta}
-            <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
-          </span>
-        </div>
-
-      </div>
             <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
           </span>
         </div>
