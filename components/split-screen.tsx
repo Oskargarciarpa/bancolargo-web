@@ -31,7 +31,7 @@ export function SplitScreen() {
         side="grupo"
         active={active}
         onActivate={setActive}
-        align="left"
+        align="center"
       />
 
       <div
@@ -54,7 +54,7 @@ export function SplitScreen() {
         side="estudio"
         active={active}
         onActivate={setActive}
-        align="right"
+        align="center"
       />
     </div>
   )
