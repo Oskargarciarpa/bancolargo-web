@@ -134,33 +134,38 @@ function Panel({
         aria-hidden="true"
       />
 
-<div className="relative z-10 flex flex-col items-center justify-center text-center w-full max-w-xl p-6 sm:p-10 lg:p-12 space-y-4">
+<div className="relative z-10 flex flex-col items-center justify-center text-center w-full max-w-xl p-6 sm:p-10 lg:p-12">
         
-        {/* 1. TÍTULO (Original sin cambios de tamaño) */}
+        {/* 1. TÍTULO */}
         <h2 className="font-display text-3xl font-extrabold uppercase leading-[0.95] tracking-tight text-balance text-foreground sm:text-4xl lg:text-5xl">
           {title}
         </h2>
 
-        {/* 2. DESCRIPCIÓN */}
-        <p className="max-w-sm text-pretty leading-relaxed text-foreground/80 text-sm md:text-base">
+        {/* 2. DESCRIPCIÓN (Espacio mt-6 para separarlo del título) */}
+        <p className="mt-6 max-w-sm text-pretty leading-relaxed text-foreground/80 text-sm md:text-base">
           {subtitle}
         </p>
 
-        {/* 3. LOGO ACHICADO */}
+        {/* 3. LOGO (Tamaño h-14/h-20 con margen vertical dedicado) */}
         {logo && (
-          <div className="py-2">
+          <div className="my-6">
             <img
               src={logo || '/placeholder.svg'}
               alt={logoAlt}
-              className="h-10 md:h-14 w-auto object-contain mx-auto drop-shadow-[0_2px_12px_oklch(0.82_0.13_82_/_0.35)] transition-transform duration-500 group-hover:scale-105 group-data-[active=true]:scale-105"
+              className="h-14 md:h-20 w-auto object-contain mx-auto drop-shadow-[0_2px_12px_oklch(0.82_0.13_82_/_0.35)] transition-transform duration-500 group-hover:scale-105 group-data-[active=true]:scale-105"
             />
           </div>
         )}
 
         {/* 4. BOTÓN CTA */}
-        <div className="pt-2 flex justify-center w-full">
+        <div className="flex justify-center w-full">
           <span className="inline-flex items-center gap-2 border-b border-gold/40 pb-1 text-sm font-semibold uppercase tracking-wider text-gold transition-all duration-300 group-hover:gap-3">
             {cta}
+            <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
+          </span>
+        </div>
+
+      </div>
             <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
           </span>
         </div>
