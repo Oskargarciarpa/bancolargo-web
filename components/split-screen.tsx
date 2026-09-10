@@ -134,27 +134,41 @@ function Panel({
         aria-hidden="true"
       />
 
-      <div className="relative z-10 flex flex-col items-center text-center w-full p-6 sm:p-10 lg:p-12">
-        <div className="flex justify-center w-full">
+<div className="relative z-10 flex flex-col items-center text-center w-full max-w-lg p-6 sm:p-10 lg:p-12">
+        {/* 1. LOGO ACHICADO Y CENTRADO */}
+        {logo && (
           <img
             src={logo || '/placeholder.svg'}
             alt={logoAlt}
-            className="mb-4 h-16 md:h-24 w-auto object-contain mx-auto drop-shadow-[0_2px_12px_oklch(0.82_0.13_82_/_0.35)] transition-transform duration-500 group-hover:scale-105 group-data-[active=true]:scale-105"
+            className="mb-3 h-12 md:h-16 w-auto object-contain mx-auto drop-shadow-[0_2px_12px_oklch(0.82_0.13_82_/_0.35)] transition-transform duration-500 group-hover:scale-105 group-data-[active=true]:scale-105"
           />
-          <h2 className="font-display text-3xl font-extrabold uppercase leading-[0.95] tracking-tight text-balance text-foreground sm:text-4xl lg:text-5xl">
-            {title}
-          </h2>
-          <p className="mt-4 max-w-sm text-pretty leading-relaxed text-foreground/70">
-            {subtitle}
-          </p>
+        )}
 
-          <div className="mt-6 flex justify-center w-full">
-  <span className="inline-flex items-center gap-2 border-b border-gold/40 pb-1 text-sm font-semibold uppercase tracking-wider text-gold transition-all duration-300 group-hover:gap-3">
-    {cta}
-    <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
-  </span>
-</div>
+        {/* 2. EYEBROW ("En vivo" / "En estudio") */}
+        {eyebrow && (
+          <div className="mb-2 flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-wider text-gold">
+            {eyebrow}
+          </div>
+        )}
+
+        {/* 3. TÍTULO */}
+        <h2 className="font-display text-2xl font-extrabold uppercase leading-[0.95] tracking-tight text-balance text-foreground sm:text-3xl lg:text-4xl">
+          {title}
+        </h2>
+
+        {/* 4. SUBTÍTULO */}
+        <p className="mt-3 max-w-xs text-pretty text-sm leading-relaxed text-foreground/80">
+          {subtitle}
+        </p>
+
+        {/* 5. BOTÓN CTA */}
+        <div className="mt-5 flex justify-center w-full">
+          <span className="inline-flex items-center gap-2 border-b border-gold/40 pb-1 text-sm font-semibold uppercase tracking-wider text-gold transition-all duration-300 group-hover:gap-3">
+            {cta}
+            <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
+          </span>
         </div>
+      </div>
       </div>
     </Link>
   )
