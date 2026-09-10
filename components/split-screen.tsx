@@ -148,10 +148,12 @@ function Panel({
             {subtitle}
           </p>
 
-          <span className="mt-7 inline-flex items-center gap-2 border-b border-gold/40 pb-1 text-sm font-semibold uppercase tracking-wider text-gold transition-all duration-300 group-hover:gap-3 group-hover:border-gold">
-            {cta}
-            <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
-          </span>
+          <div className="mt-6 flex justify-center w-full">
+  <span className="inline-flex items-center gap-2 border-b border-gold/40 pb-1 text-sm font-semibold uppercase tracking-wider text-gold transition-all duration-300 group-hover:gap-3">
+    {cta}
+    <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
+  </span>
+</div>
         </div>
       </div>
     </Link>
