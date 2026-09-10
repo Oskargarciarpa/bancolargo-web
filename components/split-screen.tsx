@@ -15,7 +15,7 @@ export function SplitScreen() {
   <img
     src="/images/banco-largo-titulo.png"
     alt="Banco Largo Music"
-    className="h-8 md:h-10 w-auto object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
+    className="h-9 md:h-18 w-auto object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
   />
 </div>
       <Panel
