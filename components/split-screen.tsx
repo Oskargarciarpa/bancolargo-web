@@ -87,7 +87,7 @@ function Panel({
   side: Exclude<Side, null>
   active: Side
   onActivate: (s: Side) => void
-  align: 'left' | 'right'
+  align: 'left' | 'right' | 'center'
 }) {
   const isActive = active === side
   const isDimmed = active !== null && !isActive
@@ -101,7 +101,7 @@ function Panel({
       onBlur={() => onActivate(null)}
       onTouchStart={() => onActivate(side)}
       onTouchEnd={() => onActivate(null)}
-      className="group relative flex flex-1 items-end overflow-hidden outline-none transition-[flex-grow] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] focus-visible:z-30 data-[active=true]:md:grow-[1.22] data-[dimmed=true]:md:grow-[0.78]"
+      className="group relative flex flex-1 items-center justify-center text-center overflow-hidden outline-none transition-[flex-grow] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] focus-visible:z-30 data-[active=true]:md:grow-[1.22] data-[dimmed=true]:md:grow-[0.78]"
       data-active={isActive}
       data-dimmed={isDimmed}
     >
@@ -134,12 +134,12 @@ function Panel({
         aria-hidden="true"
       />
 
-      <div className="relative z-10 w-full p-6 sm:p-10 lg:p-12">
-        <div className="max-w-md md:max-w-none">
+      <div className="relative z-10 flex flex-col items-center text-center w-full p-6 sm:p-10 lg:p-12">
+        <div className="flex justify-center w-full">
           <img
             src={logo || '/placeholder.svg'}
             alt={logoAlt}
-            className="mb-6 h-24 md:h-32 w-auto object-contain drop-shadow-[0_2px_12px_oklch(0.82_0.13_82_/_0.35)] transition-transform duration-500 group-hover:scale-105 group-data-[active=true]:scale-105"
+            className="mb-4 h-16 md:h-24 w-auto object-contain mx-auto drop-shadow-[0_2px_12px_oklch(0.82_0.13_82_/_0.35)] transition-transform duration-500 group-hover:scale-105 group-data-[active=true]:scale-105"
           />
           <h2 className="font-display text-3xl font-extrabold uppercase leading-[0.95] tracking-tight text-balance text-foreground sm:text-4xl lg:text-5xl">
             {title}
