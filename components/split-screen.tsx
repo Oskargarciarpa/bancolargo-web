@@ -11,7 +11,8 @@ export function SplitScreen() {
 
   return (
     <div className="relative flex h-[100dvh] w-full flex-col overflow-hidden md:flex-row">
-      <div className="absolute top-6 left-1/2 -translate-x-1/2 z-30 pointer-events-none">
+      {/* LOGO SUPERIOR DESPLAZADO HACIA ABAJO (top-12 md:top-16) */}
+      <div className="absolute top-12 md:top-16 left-1/2 -translate-x-1/2 z-30 pointer-events-none">
         <img
           src="/images/banco-largo-titulo.png"
           alt="Banco Largo Music"
@@ -134,20 +135,20 @@ function Panel({
         aria-hidden="true"
       />
 
-      {/* Estructura vertical limpia */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center w-full max-w-xl p-6 sm:p-10 lg:p-12">
+      {/* ENCUADRE DE CONTENIDO BAJADO (justify-end + pb-16 md:pb-24) */}
+      <div className="relative z-10 flex flex-col items-center justify-end text-center w-full max-w-xl h-full p-6 sm:p-10 lg:p-12 pb-16 md:pb-24">
         
         {/* 1. TÍTULO */}
         <h2 className="font-display text-3xl font-extrabold uppercase leading-[0.95] tracking-tight text-balance text-foreground sm:text-4xl lg:text-5xl">
           {title}
         </h2>
 
-        {/* 2. DESCRIPCIÓN CON ESPACIO */}
+        {/* 2. DESCRIPCIÓN */}
         <p className="mt-6 max-w-sm text-pretty leading-relaxed text-foreground/80 text-sm md:text-base">
           {subtitle}
         </p>
 
-        {/* 3. LOGO MÁS GRANDE */}
+        {/* 3. LOGO */}
         {logo && (
           <div className="my-6">
             <img
