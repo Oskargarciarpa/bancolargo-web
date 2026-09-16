@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: 'Banco Largo Music — Agrupación Musical & Estudio de Grabación',
   description:
     'Shows en vivo, giras y presentaciones exclusivas, además de producción, mezcla y máster profesional. Banco Largo Music.',
+  alternates: {
+    canonical: 'https://bancolargomusic.com/',
+  },
   generator: 'v0.app',
   icons: {
     icon: [
